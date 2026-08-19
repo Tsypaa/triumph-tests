@@ -1,0 +1,5 @@
+services:
+  backend:
+    gpus: all
+    environment:
+      DEVICE: cuda

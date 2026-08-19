@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "triumph-background-removal"
+version = "0.1.0"
+description = "Inference-only background removal pipeline"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24,<3",
+    "Pillow>=10,<13",
+]
+
+[project.optional-dependencies]
+birefnet = [
+    "einops>=0.7,<1",
+    "huggingface-hub>=0.27,<2",
+    "kornia>=0.7,<1",
+    "safetensors>=0.4,<1",
+    "timm>=1.0,<2",
+    "torch>=2.2,<3",
+    "torchvision>=0.17,<1",
+    "transformers>=4.46,<6",
+]
+benchmark = ["psutil>=5.9,<8"]
+dev = ["ruff>=0.11,<1"]
+api = [
+    "fastapi>=0.115,<1",
+    "python-multipart>=0.0.18,<1",
+    "uvicorn[standard]>=0.34,<1",
+]
+test = [
+    "httpx>=0.27,<1",
+    "pytest>=8,<10",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]

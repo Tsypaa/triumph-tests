@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-08-18T00:38:53.183669+00:00",
+  "system": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.9",
+    "runtime": {
+      "cuda_available": false,
+      "device": "cpu",
+      "torch": "2.13.0+cpu"
+    }
+  },
+  "image_directory": "C:\\Users\\artwo\\Desktop\\test\\triumph-tests\\benchmark\\images",
+  "images": [],
+  "models": [],
+  "technical_smoke_test": {
+    "note": "Not a representative benchmark: synthetic images and one inference per image only.",
+    "model_id": "ZhengPeng7/BiRefNet",
+    "revision": "e2bf8e4460fc8fa32bba5ea4d94b3233d367b0e4",
+    "device": "cpu",
+    "torch": "2.13.0+cpu",
+    "cpu_threads": 6,
+    "model_input_size": 512,
+    "source_image_size": [320, 240],
+    "parameter_count": 220176498,
+    "model_size_bytes": 880705992,
+    "cached_load_seconds": 40.88370930001838,
+    "first_inference_seconds": 8.989751099958085,
+    "contrast_object_inference_seconds": 6.903179099957924,
+    "contrast_object_alpha_extrema": [0, 255],
+    "output_mode": "RGBA",
+    "output_size": [320, 240]
+  },
+  "status": "skipped",
+  "reason": "No JPEG, PNG, or WebP benchmark images were found."
+}
